@@ -21,6 +21,7 @@ import logo from '../assets/logo.webp';
 
 const appStoreUrl = 'https://apps.apple.com/search?term=Unbeatable%20Football';
 const googlePlayUrl = 'https://play.google.com/store/search?q=Unbeatable%20Football&c=apps';
+const showStoreDownloadButtons = false;
 
 const modes = [
     {
@@ -76,20 +77,30 @@ const steps = [
 
 const teamExamples = ['Real Madrid 2016-17', 'Barcelona 2008-09', 'Bayern Munich 2012-13', 'Manchester City 2022-23', 'Liverpool 2018-19', 'Brazil 2002', 'Spain 2010', 'Argentina 2022'];
 
-const StoreButtons = ({centered = false}) => (
-    <div className={`flex flex-col items-start gap-3 sm:flex-row sm:items-center ${centered ? 'justify-center' : ''}`}>
-        <a href={appStoreUrl} target="_blank" rel="noopener noreferrer"
-           aria-label="Download Unbeatable Football on the App Store"
-           className="block transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#35F27C]">
-            <img src="/app_store.webp" alt="Download on the App Store" className="h-14 w-auto"/>
-        </a>
-        <a href={googlePlayUrl} target="_blank" rel="noopener noreferrer"
-           aria-label="Download Unbeatable Football on Google Play"
-           className="block transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#35F27C]">
-            <img src="/play_store.webp" alt="Download on the Play Store" className="h-14 w-auto"/>
-        </a>
-    </div>
-);
+const StoreButtons = ({centered = false}) => {
+    if (!showStoreDownloadButtons) {
+        return (
+            <div className={`inline-flex rounded-full border border-[#35F27C]/35 bg-[#35F27C]/10 px-5 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-[#35F27C] shadow-[0_0_30px_rgba(53,242,124,0.16)] ${centered ? 'mx-auto' : ''}`}>
+                Coming Soon for iOS & Android
+            </div>
+        );
+    }
+
+    return (
+        <div className={`flex flex-col items-start gap-3 sm:flex-row sm:items-center ${centered ? 'justify-center' : ''}`}>
+            <a href={appStoreUrl} target="_blank" rel="noopener noreferrer"
+               aria-label="Download Unbeatable Football on the App Store"
+               className="block transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#35F27C]">
+                <img src="/app_store.webp" alt="Download on the App Store" className="h-14 w-auto"/>
+            </a>
+            <a href={googlePlayUrl} target="_blank" rel="noopener noreferrer"
+               aria-label="Download Unbeatable Football on Google Play"
+               className="block transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#35F27C]">
+                <img src="/play_store.webp" alt="Download on the Play Store" className="h-14 w-auto"/>
+            </a>
+        </div>
+    );
+};
 
 const LandingPage = () => {
     return (
