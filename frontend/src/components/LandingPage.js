@@ -19,9 +19,8 @@ import Header from './Header';
 import Footer from './Footer';
 import logo from '../assets/logo.webp';
 
-const appStoreUrl = 'https://apps.apple.com/search?term=Unbeatable%20Football';
-const googlePlayUrl = 'https://play.google.com/store/search?q=Unbeatable%20Football&c=apps';
-const showStoreDownloadButtons = false;
+const appStoreUrl = 'https://apps.apple.com/us/app/unbeatable-football/id6784974578';
+const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.unbeatable.football.team';
 
 const modes = [
     {
@@ -78,16 +77,9 @@ const steps = [
 const teamExamples = ['Real Madrid 2016-17', 'Barcelona 2008-09', 'Bayern Munich 2012-13', 'Manchester City 2022-23', 'Liverpool 2018-19', 'Brazil 2002', 'Spain 2010', 'Argentina 2022'];
 
 const StoreButtons = ({centered = false}) => {
-    if (!showStoreDownloadButtons) {
-        return (
-            <div className={`inline-flex rounded-full border border-[#35F27C]/35 bg-[#35F27C]/10 px-5 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-[#35F27C] shadow-[0_0_30px_rgba(53,242,124,0.16)] ${centered ? 'mx-auto' : ''}`}>
-                Coming Soon for iOS & Android
-            </div>
-        );
-    }
-
     return (
-        <div className={`flex flex-col items-start gap-3 sm:flex-row sm:items-center ${centered ? 'justify-center' : ''}`}>
+        <div
+            className={`flex flex-col items-start gap-3 sm:flex-row sm:items-center ${centered ? 'justify-center' : ''}`}>
             <a href={appStoreUrl} target="_blank" rel="noopener noreferrer"
                aria-label="Download Unbeatable Football on the App Store"
                className="block transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#35F27C]">
@@ -123,7 +115,8 @@ const LandingPage = () => {
                 <meta property="og:site_name" content="Unbeatable Football"/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <meta name="twitter:title" content="Unbeatable Football | Historic Football Draft Game"/>
-                <meta name="twitter:description" content="Legendary team-seasons. 11-round drafts. Daily challenges. One unbeatable lineup."/>
+                <meta name="twitter:description"
+                      content="Legendary team-seasons. 11-round drafts. Daily challenges. One unbeatable lineup."/>
                 <meta name="twitter:image" content="https://unbeatablefootball.com/og-image.png"/>
                 <meta name="twitter:image:alt" content="Unbeatable Football historic football draft game"/>
             </Helmet>
