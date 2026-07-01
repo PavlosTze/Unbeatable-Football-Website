@@ -102,11 +102,11 @@ const LandingPage = () => {
                 <meta name="description"
                       content="Draft players from legendary football team-seasons across 11 rounds, build your lineup, clear daily challenges, and protect your streak in Unbeatable Football."/>
                 <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://www.unbeatablefootball.com/"/>
+                <meta property="og:url" content="https://unbeatablefootball.com/"/>
                 <meta property="og:title" content="Unbeatable Football | Historic Football Draft Game"/>
                 <meta property="og:description"
                       content="Draft players across 11 rounds, build a balanced lineup, clear daily challenges, and protect your streak."/>
-                <meta name="image" property="og:image" content="/og-image.png"/>
+                <meta property="og:image" content="/og-image.png"/>
                 <meta property="og:image:secure_url" content="/og-image.png"/>
                 <meta property="og:image:type" content="image/png"/>
                 <meta property="og:image:width" content="1200"/>
@@ -117,7 +117,7 @@ const LandingPage = () => {
                 <meta name="twitter:title" content="Unbeatable Football | Historic Football Draft Game"/>
                 <meta name="twitter:description"
                       content="Legendary team-seasons. 11-round drafts. Daily challenges. One unbeatable lineup."/>
-                <meta name="twitter:image" content="https://www.unbeatablefootball.com/og-image.png"/>
+                <meta name="twitter:image" content="https://unbeatablefootball.com/og-image.png"/>
                 <meta name="twitter:image:alt" content="Unbeatable Football historic football draft game"/>
             </Helmet>
 
